@@ -1,0 +1,315 @@
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20230206235414)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230206235414"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-06 23:55:02.906981"], ["updated_at", "2023-02-06 23:55:02.906981"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sfsdf" for ::1 at 2023-02-06 17:56:22 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sfsdf"):
+  
+Started GET "/products" for ::1 at 2023-02-06 18:00:08 -0600
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/products" for ::1 at 2023-02-06 18:02:12 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 272.8ms | Allocations: 96916)
+Completed 200 OK in 280ms (Views: 274.2ms | Allocations: 99385)
+
+
+Started GET "/products" for ::1 at 2023-02-06 18:05:51 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:5
+  Rendered products/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1071)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 15417)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 17087)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Laptop"], ["description", "Pink Laptop"], ["created_at", "2023-02-07 00:06:28.777519"], ["updated_at", "2023-02-07 00:06:28.777519"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Desktop"], ["description", "Color blue"], ["created_at", "2023-02-07 00:06:50.964995"], ["updated_at", "2023-02-07 00:06:50.964995"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products" for ::1 at 2023-02-06 18:06:57 -0600
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:5
+  Rendered products/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 6695)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 9325)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.6ms | Allocations: 9658)
+
+
+Started GET "/products/1" for ::1 at 2023-02-06 18:07:43 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 14415)
+Completed 200 OK in 16ms (Views: 14.8ms | Allocations: 15095)
+
+
+Started GET "/products/1" for ::1 at 2023-02-06 18:08:36 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 14266)
+Completed 200 OK in 50030ms (Views: 17.6ms | Allocations: 176893)
+
+
+Started GET "/products/1" for ::1 at 2023-02-06 18:09:57 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4629)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4717)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.1ms | Allocations: 10354)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x00000000020080>
+
+            @virtual_path = "products/show";;@output_buffer.safe_append='<h1>'.freeze;@output_buffer.append=( product.name);@output_buffer.safe_append='</h1>
+                                                                                                              ^^^^^^^
+Did you mean?  @product):
+    1: <h1><%= product.name%></h1>
+    2: <p><%= product.description%></p>
+  
+app/views/products/show.html.erb:1
+Started GET "/products/1" for ::1 at 2023-02-06 18:10:12 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:9:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 14582)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 15922)
+
+
+Started GET "/products/new" for ::1 at 2023-02-06 18:13:38 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4335)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 18481)
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 0.7ms | Allocations: 21792)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:15:13 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Test name", "description"=>"Test descriptoin"}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 236393ms (Allocations: 177887)
+
+
+Started GET "/products/new" for ::1 at 2023-02-06 18:19:33 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 15255)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.6ms | Allocations: 18340)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:37 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1242)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:40 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 978)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:41 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 963)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:41 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 963)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:41 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 970)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:42 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 973)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:19:42 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 973)
+
+
+Started GET "/products/new" for ::1 at 2023-02-06 18:21:18 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 15168)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.7ms | Allocations: 18165)
+
+
+Started GET "/products/new" for ::1 at 2023-02-06 18:22:20 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1322)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 15253)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.7ms | Allocations: 18266)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:22:21 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2052)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4236)
+Completed 422 Unprocessable Entity in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 5505)
+
+
+Started GET "/products/new" for ::1 at 2023-02-06 18:23:58 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1629)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 15741)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 0.9ms | Allocations: 19058)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:25:02 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1718)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1797)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3084)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass
+
+   @Product.errors.full_message.each do |message| 
+           ^^^^^^^):
+    1: <%= form_with(model: @product) do |form| %>
+    2: 
+    3: <% if @product.errors.any?%>
+    4:   <% @Product.errors.full_message.each do |message| %>
+    5:     <%= message%>
+    6:   <% end %>
+    7: <% end %>
+  
+app/views/products/new.html.erb:4
+app/views/products/new.html.erb:1
+app/controllers/products_controller.rb:26:in `create'
+Started GET "/products/new" for ::1 at 2023-02-06 18:25:19 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1558)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4124)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4929)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:25:20 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 946)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1025)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2204)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2)):
+    1: <%= form_with(model: @product) do |form| %>
+    2: 
+    3: <% if @product.errors.any?%>
+    4:   <% @product.errors.full_message.each do |message| %>
+    5:     <%= message%>
+    6:   <% end %>
+    7: <% end %>
+  
+app/views/products/new.html.erb:4
+app/views/products/new.html.erb:1
+app/controllers/products_controller.rb:26:in `create'
+Started GET "/products/new" for ::1 at 2023-02-06 18:25:29 -0600
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1551)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4122)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4926)
+
+
+Started POST "/products" for ::1 at 2023-02-06 18:25:31 -0600
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "description"=>""}, "commit"=>"Create Product"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2731)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4915)
+Completed 422 Unprocessable Entity in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 6096)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBlogs (20230207002708)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230207002708"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

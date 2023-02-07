@@ -1,0 +1,19 @@
+<%= form_with(model: @product) do |form| %>
+
+<% if @product.errors.any?%>
+  <% @product.errors.full_messages.each do |message| %>
+    <%= message%>
+  <% end %>
+<% end %>
+<div>
+  <%= form.label :name%>
+  <%= form.text_field :name%>
+</div>
+<div>
+  <%= form.label :description%>
+  <%= form.text_field :description%>
+</div>
+
+<%= form.submit %>
+
+<% end %> 
