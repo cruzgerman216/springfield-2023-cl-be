@@ -1,0 +1,796 @@
+Started GET "/" for ::1 at 2023-02-09 17:17:24 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/germancruz/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/germancruz/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 585)
+Completed 200 OK in 22ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 4651)
+
+
+Started GET "/" for ::1 at 2023-02-09 17:17:36 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/germancruz/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/germancruz/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 477)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3311)
+
+
+Started GET "/books" for ::1 at 2023-02-09 17:44:21 -0600
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230209234121_create_books.rb
+
+
+):
+  
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20230209234121)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "summary" varchar, "published_date" datetime(6), "image_path" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230209234121"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-09 23:44:35.664894"], ["updated_at", "2023-02-09 23:44:35.664894"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/books" for ::1 at 2023-02-09 17:44:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1649)
+  Rendered layout layouts/application.html.erb (Duration: 270.2ms | Allocations: 94008)
+Completed 200 OK in 282ms (Views: 273.3ms | ActiveRecord: 0.2ms | Allocations: 97878)
+
+
+Started GET "/books/new" for ::1 at 2023-02-09 17:45:05 -0600
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 20.3ms | Allocations: 5683)
+  Rendered books/new.html.erb within layouts/application (Duration: 21.2ms | Allocations: 6022)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 8340)
+Completed 200 OK in 32ms (Views: 24.7ms | ActiveRecord: 0.6ms | Allocations: 13751)
+
+
+Started POST "/books" for ::1 at 2023-02-09 17:45:09 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "summary"=>"", "published_date"=>"", "image_path"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 4.7ms | Allocations: 3443)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3538)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5835)
+Completed 422 Unprocessable Entity in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 7589)
+
+
+Started POST "/books" for ::1 at 2023-02-09 17:46:15 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"To Kill a Mocking Bird", "summary"=>"Lorem Ipsum", "published_date"=>"", "image_path"=>"https://timelinecovers.pro/facebook-cover/download/ultra-hd-space-facebook-cover.jpg"}, "commit"=>"Create Book"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "To Kill a Mocking Bird"], ["summary", "Lorem Ipsum"], ["published_date", nil], ["image_path", "https://timelinecovers.pro/facebook-cover/download/ultra-hd-space-facebook-cover.jpg"], ["created_at", "2023-02-09 23:46:15.249066"], ["updated_at", "2023-02-09 23:46:15.249066"]]
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 3461)
+
+
+Started GET "/books/1" for ::1 at 2023-02-09 17:46:15 -0600
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.4ms | Allocations: 251)
+  Rendered books/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1655)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3955)
+Completed 200 OK in 24ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 8384)
+
+
+Started GET "/books" for ::1 at 2023-02-09 17:46:20 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered books/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1080)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3275)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3590)
+
+
+Started GET "/books" for ::1 at 2023-02-09 17:47:11 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  Rendered books/_book.html.erb (Duration: 0.5ms | Allocations: 265)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1726)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4290)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 5110)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20230209234807)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230209234807"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/categories" for ::1 at 2023-02-09 17:48:39 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1782)
+  Rendered layout layouts/application.html.erb (Duration: 113.3ms | Allocations: 37126)
+Completed 200 OK in 123ms (Views: 116.1ms | ActiveRecord: 0.2ms | Allocations: 40896)
+
+
+Started GET "/categories/new" for ::1 at 2023-02-09 17:48:41 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 5.5ms | Allocations: 2785)
+  Rendered categories/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3127)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5448)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 0.7ms | Allocations: 9407)
+
+
+Started POST "/categories" for ::1 at 2023-02-09 17:48:59 -0600
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Mystery"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mystery"], ["created_at", "2023-02-09 23:48:59.780313"], ["updated_at", "2023-02-09 23:48:59.780313"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 3806)
+
+
+Started GET "/categories/1" for ::1 at 2023-02-09 17:48:59 -0600
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.3ms | Allocations: 177)
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1534)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3835)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 6618)
+
+
+Started GET "/categories" for ::1 at 2023-02-09 17:49:01 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered categories/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1080)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3275)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3590)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooksCategories (20230209235108)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "books_categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "book_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_4b64804a3a"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+, CONSTRAINT "fk_rails_426cc1dbb3"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_books_categories_on_book_id" ON "books_categories" ("book_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_books_categories_on_category_id" ON "books_categories" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230209235108"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_categories" ON "books"."id" = "books_categories"."book_id" WHERE "books_categories"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.6ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["category_id", 1], ["created_at", "2023-02-09 23:55:21.128080"], ["updated_at", "2023-02-09 23:55:21.128080"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/books" for ::1 at 2023-02-09 17:57:48 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 11.1ms | Allocations: 10326)
+  Rendered books/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 15230)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 29289)
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 0.8ms | Allocations: 33030)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDescriptionToCategories (20230209235951)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "categories" ADD "description" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230209235951"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/books/new" for ::1 at 2023-02-09 18:02:18 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.3ms | Allocations: 2567)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2917)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 16870)
+Completed 200 OK in 28ms (Views: 21.5ms | ActiveRecord: 0.5ms | Allocations: 21629)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Reference book"], ["created_at", "2023-02-10 00:08:01.794014"], ["updated_at", "2023-02-10 00:08:01.794014"], ["description", "[\"Amet dicta neque. Voluptatem eligendi minus. Eum id quidem.\", \"Ullam est ratione. Et sunt velit. Dolorum eligendi fugit.\", \"Ea aut consequatur. Doloribus vero velit. Soluta ratione non.\"]"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Horror"], ["created_at", "2023-02-10 00:08:01.799373"], ["updated_at", "2023-02-10 00:08:01.799373"], ["description", "[\"Quo ipsam nulla. Aut officiis delectus. Et saepe rerum.\", \"Rerum quam corporis. Voluptatibus voluptatem quos. Repudiandae atque sit.\", \"Quibusdam eius atque. Fuga repellat quae. Fuga amet eligendi.\"]"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Fantasy"], ["created_at", "2023-02-10 00:08:01.803821"], ["updated_at", "2023-02-10 00:08:01.803821"], ["description", "[\"Saepe ab magnam. Assumenda laboriosam rem. Voluptatem facilis ipsum.\", \"Doloremque eveniet velit. Enim impedit aliquid. Molestiae dolor accusantium.\", \"Nostrum maiores non. Sit magnam aliquam. Perferendis amet vel.\"]"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Mystery"], ["created_at", "2023-02-10 00:08:01.808346"], ["updated_at", "2023-02-10 00:08:01.808346"], ["description", "[\"Explicabo repellendus temporibus. Et expedita et. Praesentium molestiae aliquid.\", \"Temporibus vitae sapiente. Maiores dolores nostrum. Ut nostrum aperiam.\", \"Sint omnis eveniet. Neque saepe corporis. Quis sit ab.\"]"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Suspense/Thriller"], ["created_at", "2023-02-10 00:08:01.812570"], ["updated_at", "2023-02-10 00:08:01.812570"], ["description", "[\"Unde delectus qui. Doloremque dolorem dolores. Fugit doloremque aspernatur.\", \"Et est ex. Perferendis ea voluptatem. Optio animi hic.\", \"Impedit vero accusantium. Ut at blanditiis. Enim impedit accusamus.\"]"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Fable"], ["created_at", "2023-02-10 00:08:01.817015"], ["updated_at", "2023-02-10 00:08:01.817015"], ["description", "[\"Nemo quia est. Non est et. Ut architecto nihil.\", \"Dicta labore sit. Adipisci eveniet voluptatem. Harum dolores laboriosam.\", \"Earum atque sunt. Et perspiciatis dolore. Eum ab vitae.\"]"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Tender Is the Night"], ["summary", "[\"Laborum aut quo. Autem ipsum id. Autem pariatur animi.\", \"Iste ea ad. Quod est sed. Quasi ut inventore.\", \"Dolores hic sapiente. Corporis culpa enim. Repellat ipsum quidem.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:01.827980"], ["updated_at", "2023-02-10 00:08:01.827980"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Suspense/Thriller"], ["created_at", "2023-02-10 00:08:40.921041"], ["updated_at", "2023-02-10 00:08:40.921041"], ["description", "[\"Sed dolores cum. Iure modi omnis. Animi accusamus aut.\", \"Sint voluptatum dolorum. Dolor omnis sit. Fugiat libero sunt.\", \"Impedit et fugit. Voluptatem facilis autem. Architecto placeat nam.\"]"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Essay"], ["created_at", "2023-02-10 00:08:40.927373"], ["updated_at", "2023-02-10 00:08:40.927373"], ["description", "[\"Nostrum numquam animi. Laudantium ut enim. Et earum dolor.\", \"Et architecto esse. Error repellat aspernatur. Velit voluptatem quis.\", \"Est dolor rem. Porro et et. Et distinctio et.\"]"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Western"], ["created_at", "2023-02-10 00:08:40.932017"], ["updated_at", "2023-02-10 00:08:40.932017"], ["description", "[\"Soluta quod voluptatibus. Sit aliquam adipisci. Reprehenderit est voluptates.\", \"Sit non inventore. Eaque nemo explicabo. Vel id non.\", \"Ut perspiciatis quasi. Eius asperiores delectus. Repellat pariatur itaque.\"]"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Fantasy"], ["created_at", "2023-02-10 00:08:40.936611"], ["updated_at", "2023-02-10 00:08:40.936611"], ["description", "[\"Alias libero dolores. Omnis laborum sed. Sed optio qui.\", \"Neque esse quia. Rem doloribus tempora. In ex perspiciatis.\", \"Aut eum a. Eos saepe nisi. Nisi ratione ipsum.\"]"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Fairy tale"], ["created_at", "2023-02-10 00:08:40.940990"], ["updated_at", "2023-02-10 00:08:40.940990"], ["description", "[\"Modi quod sit. Ullam aut voluptas. Adipisci incidunt earum.\", \"Laboriosam amet eum. Sequi nemo nulla. Et omnis quis.\", \"Accusantium praesentium nobis. Enim culpa aut. Assumenda veniam et.\"]"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?)[0m  [["name", "Western"], ["created_at", "2023-02-10 00:08:40.945276"], ["updated_at", "2023-02-10 00:08:40.945276"], ["description", "[\"Laboriosam quae dolorum. Molestiae deleniti repudiandae. Sit error sed.\", \"Eius qui quidem. Delectus minus omnis. Et facere fugit.\", \"Autem quo magnam. Quam pariatur et. Quod accusamus a.\"]"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Blue Remembered Earth"], ["summary", "[\"Ipsam itaque modi. Eum dolores nostrum. Placeat blanditiis porro.\", \"Qui saepe et. Architecto aut sit. Sit et inventore.\", \"Consectetur qui deleniti. Et et aut. Nihil et dolorum.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:40.956126"], ["updated_at", "2023-02-10 00:08:40.956126"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 3]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 3], ["category_id", 1], ["created_at", "2023-02-10 00:08:40.973458"], ["updated_at", "2023-02-10 00:08:40.973458"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 3], ["category_id", 8], ["created_at", "2023-02-10 00:08:40.975335"], ["updated_at", "2023-02-10 00:08:40.975335"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 3], ["category_id", 2], ["created_at", "2023-02-10 00:08:40.976704"], ["updated_at", "2023-02-10 00:08:40.976704"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 3], ["category_id", 4], ["created_at", "2023-02-10 00:08:40.978093"], ["updated_at", "2023-02-10 00:08:40.978093"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cabbages and Kings"], ["summary", "[\"Soluta exercitationem consectetur. Asperiores aut possimus. Ut provident accusamus.\", \"Illo doloribus ex. Quia ut nemo. Ullam et labore.\", \"Ut sit saepe. Dolores aliquid consequatur. Veniam et harum.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:40.981699"], ["updated_at", "2023-02-10 00:08:40.981699"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 4]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 4], ["category_id", 8], ["created_at", "2023-02-10 00:08:40.987059"], ["updated_at", "2023-02-10 00:08:40.987059"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Green Bay Tree"], ["summary", "[\"Dolore atque voluptas. Sunt aliquid hic. Tenetur et dolore.\", \"Harum voluptas adipisci. Velit dolorum maiores. Placeat aliquam nulla.\", \"Eaque consequuntur odit. Ex nulla optio. Velit minima in.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:40.991151"], ["updated_at", "2023-02-10 00:08:40.991151"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 5]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.4ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 5], ["category_id", 3], ["created_at", "2023-02-10 00:08:40.996682"], ["updated_at", "2023-02-10 00:08:40.996682"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 5], ["category_id", 6], ["created_at", "2023-02-10 00:08:40.999209"], ["updated_at", "2023-02-10 00:08:40.999209"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 5], ["category_id", 13], ["created_at", "2023-02-10 00:08:41.000578"], ["updated_at", "2023-02-10 00:08:41.000578"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 5], ["category_id", 8], ["created_at", "2023-02-10 00:08:41.001953"], ["updated_at", "2023-02-10 00:08:41.001953"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 5], ["category_id", 7], ["created_at", "2023-02-10 00:08:41.003317"], ["updated_at", "2023-02-10 00:08:41.003317"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Behold the Man"], ["summary", "[\"Qui a ut. Dolorum optio debitis. Eius impedit quia.\", \"Et dolore aliquam. Quasi velit consequatur. Aliquid et consequatur.\", \"Rerum reprehenderit iste. Tempora aut reiciendis. Unde nam eligendi.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.007163"], ["updated_at", "2023-02-10 00:08:41.007163"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 6]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 6], ["category_id", 8], ["created_at", "2023-02-10 00:08:41.012775"], ["updated_at", "2023-02-10 00:08:41.012775"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 6], ["category_id", 10], ["created_at", "2023-02-10 00:08:41.015277"], ["updated_at", "2023-02-10 00:08:41.015277"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Heart Is Deceitful Above All Things"], ["summary", "[\"Sint dolor doloremque. Sit quo architecto. A quibusdam repellendus.\", \"Unde tenetur illo. Sed impedit cupiditate. Consectetur eaque non.\", \"Dolor sequi facere. Fugiat sit consectetur. Ab et ut.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.018976"], ["updated_at", "2023-02-10 00:08:41.018976"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 7]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.2ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 7], ["category_id", 10], ["created_at", "2023-02-10 00:08:41.024001"], ["updated_at", "2023-02-10 00:08:41.024001"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 7], ["category_id", 6], ["created_at", "2023-02-10 00:08:41.026001"], ["updated_at", "2023-02-10 00:08:41.026001"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "East of Eden"], ["summary", "[\"Sequi earum unde. Illo accusantium eius. Sed culpa saepe.\", \"Minus voluptates enim. Sequi debitis velit. Ea reiciendis dignissimos.\", \"Non ipsa rerum. Mollitia tempora et. Tempora illum similique.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.029224"], ["updated_at", "2023-02-10 00:08:41.029224"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 8]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 8], ["category_id", 3], ["created_at", "2023-02-10 00:08:41.034003"], ["updated_at", "2023-02-10 00:08:41.034003"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Catskill Eagle"], ["summary", "[\"Eum consequatur voluptatem. Sit sed ex. Atque quidem fugiat.\", \"Libero consequuntur distinctio. Cum est placeat. Repudiandae non neque.\", \"Consequatur doloremque illum. Libero voluptates placeat. Molestias dolores quasi.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.038177"], ["updated_at", "2023-02-10 00:08:41.038177"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 9]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.4ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 9], ["category_id", 6], ["created_at", "2023-02-10 00:08:41.044323"], ["updated_at", "2023-02-10 00:08:41.044323"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 9], ["category_id", 4], ["created_at", "2023-02-10 00:08:41.047142"], ["updated_at", "2023-02-10 00:08:41.047142"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 9], ["category_id", 9], ["created_at", "2023-02-10 00:08:41.048537"], ["updated_at", "2023-02-10 00:08:41.048537"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 9], ["category_id", 1], ["created_at", "2023-02-10 00:08:41.049891"], ["updated_at", "2023-02-10 00:08:41.049891"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 9], ["category_id", 3], ["created_at", "2023-02-10 00:08:41.051223"], ["updated_at", "2023-02-10 00:08:41.051223"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wind's Twelve Quarters"], ["summary", "[\"Est sed ab. Est ducimus assumenda. Veniam qui et.\", \"Aspernatur cupiditate ut. Illum consectetur facilis. Consequatur quas saepe.\", \"Temporibus ex quisquam. Similique repellendus laborum. Doloribus omnis est.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.054985"], ["updated_at", "2023-02-10 00:08:41.054985"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 10]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 10], ["category_id", 11], ["created_at", "2023-02-10 00:08:41.060052"], ["updated_at", "2023-02-10 00:08:41.060052"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Golden Apples of the Sun"], ["summary", "[\"Ipsum alias recusandae. Id quia qui. Aut accusantium quia.\", \"Necessitatibus modi et. Dolorum explicabo repudiandae. Repellendus saepe nihil.\", \"Quasi consequatur ut. Exercitationem quis eum. Natus dolore illo.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.064228"], ["updated_at", "2023-02-10 00:08:41.064228"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 11]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 11], ["category_id", 4], ["created_at", "2023-02-10 00:08:41.069137"], ["updated_at", "2023-02-10 00:08:41.069137"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 11], ["category_id", 1], ["created_at", "2023-02-10 00:08:41.071282"], ["updated_at", "2023-02-10 00:08:41.071282"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 11], ["category_id", 12], ["created_at", "2023-02-10 00:08:41.072461"], ["updated_at", "2023-02-10 00:08:41.072461"]]
+  [1m[36mBook::HABTM_Categories Create (0.0ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 11], ["category_id", 2], ["created_at", "2023-02-10 00:08:41.073652"], ["updated_at", "2023-02-10 00:08:41.073652"]]
+  [1m[36mBook::HABTM_Categories Create (0.0ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 11], ["category_id", 7], ["created_at", "2023-02-10 00:08:41.074857"], ["updated_at", "2023-02-10 00:08:41.074857"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wealth of Nations"], ["summary", "[\"Eum autem qui. In iure consectetur. Recusandae nemo exercitationem.\", \"Non voluptates libero. Quaerat dolores quia. Quam praesentium voluptatum.\", \"Aut quae et. Commodi et et. Aspernatur quod fugit.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.078156"], ["updated_at", "2023-02-10 00:08:41.078156"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 12]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 12], ["category_id", 11], ["created_at", "2023-02-10 00:08:41.083039"], ["updated_at", "2023-02-10 00:08:41.083039"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 12], ["category_id", 7], ["created_at", "2023-02-10 00:08:41.085142"], ["updated_at", "2023-02-10 00:08:41.085142"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "summary", "published_date", "image_path", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Farewell to Arms"], ["summary", "[\"Ducimus quibusdam omnis. Omnis modi pariatur. Ut rerum sapiente.\", \"Minus qui et. Hic molestiae eos. Expedita et molestias.\", \"Occaecati aut iure. Delectus ducimus distinctio. Nemo repudiandae error.\"]"], ["published_date", nil], ["image_path", nil], ["created_at", "2023-02-10 00:08:41.088339"], ["updated_at", "2023-02-10 00:08:41.088339"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 13]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 13], ["category_id", 13], ["created_at", "2023-02-10 00:08:41.093444"], ["updated_at", "2023-02-10 00:08:41.093444"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 13], ["category_id", 7], ["created_at", "2023-02-10 00:08:41.095634"], ["updated_at", "2023-02-10 00:08:41.095634"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 13], ["category_id", 4], ["created_at", "2023-02-10 00:08:41.096841"], ["updated_at", "2023-02-10 00:08:41.096841"]]
+  [1m[36mBook::HABTM_Categories Create (0.1ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 13], ["category_id", 12], ["created_at", "2023-02-10 00:08:41.098032"], ["updated_at", "2023-02-10 00:08:41.098032"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/books" for ::1 at 2023-02-09 18:09:03 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 22.0ms | Allocations: 10830)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 2.4ms | Allocations: 2210)
+  Rendered books/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 14584)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 14665)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.6ms | Allocations: 15042)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    23: 
+    24:   <p>
+    25:     <strong>Image path:</strong>
+    26:     <%= image_tag book.image_path %>
+    27:   </p>
+    28: 
+    29: </div>
+  
+app/views/books/_book.html.erb:26
+app/views/books/index.html.erb:7
+app/views/books/index.html.erb:6
+Started GET "/books" for ::1 at 2023-02-09 18:10:40 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:6
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 2.7ms | Allocations: 1286)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.4ms | Allocations: 871)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.3ms | Allocations: 926)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 4]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 5.4ms | Allocations: 884)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.3ms | Allocations: 941)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 6]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.9ms | Allocations: 898)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 7]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.1ms | Allocations: 899)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 8]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.6ms | Allocations: 884)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 9]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.4ms | Allocations: 958)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 10]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 2.2ms | Allocations: 885)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 11]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.3ms | Allocations: 941)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 12]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.7ms | Allocations: 898)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 13]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 1.2ms | Allocations: 927)
+  Rendered books/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 15020)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 17601)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 1.5ms | Allocations: 18446)
+
+
+Started GET "/sdfs" for ::1 at 2023-02-09 18:13:41 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230210001325_create_reviews.rb
+
+
+):
+  
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.4.2) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReviews (20230210001325)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "rating" integer, "comment" varchar, "book_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_924a0b30ca"
+FOREIGN KEY ("book_id")
+  REFERENCES "books" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_book_id" ON "reviews" ("book_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230210001325"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sdfs" for ::1 at 2023-02-09 18:13:51 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sdfs"):
+  
+Started GET "/sdfs" for ::1 at 2023-02-09 18:15:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/sdfs"):
+  
+Started GET "/sdfs" for ::1 at 2023-02-09 18:17:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/sdfs"):
+  
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:19:17 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 10.2ms | Allocations: 5298)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5579)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 5664)
+Completed 500 Internal Server Error in 43076ms (ActiveRecord: 0.8ms | Allocations: 183661)
+
+
+  
+ActionView::Template::Error (undefined method `reviews_path' for #<ActionView::Base:0x0000000002dc08>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: review) do |form| %>
+    2:   <% if review.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+  
+app/views/reviews/_form.html.erb:1
+app/views/reviews/new.html.erb:3
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:21:32 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 9.6ms | Allocations: 5255)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5510)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5595)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms | Allocations: 9409)
+
+
+  
+ActionView::Template::Error (undefined method `reviews_path' for #<ActionView::Base:0x00000000032ff0>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: review) do |form| %>
+    2:   <% if review.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+  
+app/views/reviews/_form.html.erb:1
+app/views/reviews/new.html.erb:3
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:21:33 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 12.3ms | Allocations: 4909)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 4971)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5050)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 5322)
+
+
+  
+ActionView::Template::Error (undefined method `reviews_path' for #<ActionView::Base:0x000000000332e8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^):
+    1: <%= form_with(model: review) do |form| %>
+    2:   <% if review.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+  
+app/views/reviews/_form.html.erb:1
+app/views/reviews/new.html.erb:3
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:23:16 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 4.2ms | Allocations: 2240)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2502)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 16629)
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 1.3ms | Allocations: 25401)
+
+
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:26:41 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 2.9ms | Allocations: 1887)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 16243)
+Completed 200 OK in 34ms (Views: 19.7ms | ActiveRecord: 1.5ms | Allocations: 24955)
+
+
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:27:08 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 2.2ms | Allocations: 1622)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1874)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 15874)
+Completed 200 OK in 30ms (Views: 18.1ms | ActiveRecord: 1.6ms | Allocations: 24605)
+
+
+Started POST "/books/1/reviews" for ::1 at 2023-02-09 18:28:12 -0600
+Processing by ReviewsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"rating"=>"6", "comment"=>"This by Emily. It was okay. "}, "commit"=>"Create Review", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5858)
+
+
+  
+NoMethodError (undefined method `reviews' for #<Book id: 1, title: "To Kill a Mocking Bird", summary: "Lorem Ipsum", published_date: nil, image_path: "https://timelinecovers.pro/facebook-cover/download...", created_at: "2023-02-09 23:46:15.249066000 +0000", updated_at: "2023-02-09 23:46:15.249066000 +0000">):
+  
+app/controllers/reviews_controller.rb:15:in `create'
+Started GET "/books/1/reviews/new" for ::1 at 2023-02-09 18:28:50 -0600
+Processing by ReviewsController#new as HTML
+  Parameters: {"book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:5:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 2.3ms | Allocations: 1333)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 15326)
+Completed 200 OK in 34ms (Views: 19.2ms | ActiveRecord: 1.3ms | Allocations: 24088)
+
+
+Started POST "/books/1/reviews" for ::1 at 2023-02-09 18:29:02 -0600
+Processing by ReviewsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"rating"=>"9", "comment"=>"It is a 9."}, "commit"=>"Create Review", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17:in `create'
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("rating", "comment", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["rating", 9], ["comment", "It is a 9."], ["book_id", 1], ["created_at", "2023-02-10 00:29:02.564966"], ["updated_at", "2023-02-10 00:29:02.564966"]]
+  ↳ app/controllers/reviews_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:17:in `create'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms | Allocations: 4816)
+
+
+Started GET "/books/1" for ::1 at 2023-02-09 18:29:02 -0600
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 10.6ms | Allocations: 8441)
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:5
+  Rendered books/show.html.erb within layouts/application (Duration: 14.2ms | Allocations: 11234)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 13617)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.1ms | Allocations: 15034)
+
+
+Started GET "/books/1" for ::1 at 2023-02-09 18:29:24 -0600
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_book.html.erb:3
+  Rendered books/_book.html.erb (Duration: 2.3ms | Allocations: 1349)
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:5
+  Rendered books/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3130)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5668)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 7006)
+
+
